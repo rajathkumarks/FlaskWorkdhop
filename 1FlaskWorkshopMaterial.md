@@ -4,7 +4,7 @@
 
 ## 1.1 Setting up the Environment
 
-### 1.1.1 Objectives:
+### 1.1.1 Objectives
 
 <span style="color:black">It's good practice to have a different python environment for different development setup. Here we're learning about how to setup an virtual environment for Flask Framework for our web application development. </span> 
 
@@ -420,4 +420,27 @@ Refactor your calculator application from before!
 - In your python file, accept the values from the form and depending on what the request contains, respond with the sum, difference, product or quotient.
 
 # 3. CRUD with Flask
+
+<span style="color:black">**C**reate, **R**ead, **U**pdate and **D**elete</span>
+
+## 3.1 Key Definitions
+
+<span style="color:black">Now that we have a solid understanding of the basics of Flasks, it's time to build some more powerful web applications. Before we do so, let's quickly review some key concepts relating to the internet.</span>
+
+<span style="color:black">**HTTP** - **H**yper **T**ext **T**ransfer **P**rotocol, The protocol that clients and servers use to communicate.</span>
+
+<span style="color:black">**Idempotent** - An operation is idempotent if calling it multiple times yields the same result. </span>
+
+<span style="color:black">**CRUD** - Shorthand for **C**reate, **R**ead, **U**pdate, and **D**elete. We often talk about implementing CRUD on a resource when building web applications.</span>
+
+<span style="color:black">**Resource** - A `noun` that we operate on. An application can have many resources, but each resource will have its own set of routes and CRUD operations. For example, `users` and `tweets` are two examples of resources for Twitter.</span>
+
+### 3.1.2 Objectives
+
+<span style="color:black">By the end of this chapter, you should be able to:</span>
+
+- Explain what REST is and describe RESTful routing
+- Include flask modus for overriding the default HTTP method
+- Build a CRUD app in Flask
+- Include a stylesheet in a Flask application
 
