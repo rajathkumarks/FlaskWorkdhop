@@ -1,10 +1,10 @@
-# Flask Framework with Python
+# 1. Flask Framework with Python
 
 [TOC]
 
-## Setting up the Environment
+## 1.1 Setting up the Environment
 
-### Objectives:
+### 1.1.1 Objectives:
 
 <span style="color:black">It's good practice to have a different python environment for different development setup. Here we're learning about how to setup an virtual environment for Flask Framework for our web application development. </span> 
 
@@ -13,7 +13,7 @@
 - Install <span style="color:red">`virtualenv`</span> , <span style="color:red">`virtualwrapper`</span> and create virtual environments
 - Use Flask to setup a simple server and respond with text
 
-### Getting set up in a virtual environment
+### 1.1.2 Getting set up in a virtual environment
 
 <span style="color:black">As you start working on more Python projects, you may find that managing dependencies becomes problematic. For example, you may start a project that uses version 3.5.x of some library, and later on you may start a new project and realize that version 3.7.x of the module is updated. But this new version breaks things in your old project, so you need to either deal with a broken old project, or a new project with an old version of the library.</span>
 
@@ -21,7 +21,7 @@
 
 <span style="color:black">Thankfully, there's a way to set this up without much trouble in Python. The tool we'll be using is called  <span style="color:red">`virtualenv`</span> and<span style="color:red">`virtualwrapper`</span> . Before we get started with any significant Python development, let's set up <span style="color:red">`virtualenv`</span> and<span style="color:red">`virtualwrapper`</span>so we can create separate environments for each project we'll be working on.</span>
 
-#### Installing <span style="color:red">`virtualenv`</span> and <span style="color:red">`virtualwrapper`</span>
+#### 1.1.2.1 Installing <span style="color:red">`virtualenv`</span> and <span style="color:red">`virtualwrapper`</span>
 
 ```bash
 pip3 install virtualenv
@@ -35,7 +35,7 @@ pip3 install virtualenvwrapper-win
 
 ![](.\images\virtualwrapper.PNG)
 
-#### Creating Virtual Environment
+#### 1.1.2.2 Creating Virtual Environment
 
 <span style="color:black">To create virtual environment, you'll use <span style="color:red">`mkvirtualenv`</span> command </span>
 
@@ -92,11 +92,11 @@ pip3 install flask
 
 ![](.\images\flaskcheck.PNG)
 
-## Introduction to Flask Framework
+## 1.2 Introduction to Flask Framework
 
 > **<span style="color:black">Pirates use Flask, the Navy uses Django</span>**
 
-### What is Flask ?
+### 1.2.1 What is Flask ?
 
 <span style="color:black">Flask is a micro-framework in Python. It allows us to easily start a server, and, when combined with other modules, build sophisticated applications. Flask is very easy to get started with so let's jump in!</span> 
 
@@ -148,7 +148,7 @@ if __name__ == '__main__':
 
 ![](.\images\intelleyeswelcome.PNG)
 
-### Flask Exercises
+### 1.2.2 Flask Exercises
 
 <span style="color:black">For thsi assignemtn you will be creating a very small flask appkication,. Your application should:</span>
 
@@ -159,15 +159,15 @@ if __name__ == '__main__':
 
 - have a route for `/welcome/<yourname>`, which responds with string "Welcome `<yourname>`"
 
-# Templating with Jinja2
+# 2. Templating with Jinja2
 
-## What is a Template ?
+## 2.1 What is a Template ?
 
 <span style="color:black">Very commonly, we want to send data from our server back to our client. In the olden days, servers often just held a collection of files; the client would request, say, an HTML file, and the server would send it over. Because these files were static and unchanged by the server, such sites are often referred to as *static sites*.</span> 
 
 <span style="color:black">In more modern web development, instead of sending static data all the time, we often want to send *dynamic* data, which may depend on which user is signed in, whether a user's account has expired, and so on. To do this we will be using the templating engine built into Flask, which is called **Jinja2**.</span>
 
-### Objectives:
+### 2.1.1 Objectives:
 
 <span style="color:black">By the end of this section, you should be able to:</span>
 
@@ -175,7 +175,7 @@ if __name__ == '__main__':
 - Use Jinja2 as a server side templating engine
 - Pass values to a server side template with Flask and evaluate them with Jinja
 
-### Jinja2
+### 2.1.2 Jinja2
 
 <span style="color:black">Since Jinja2 comes with Flask we do not need to <span style="color:red">`pip install`</span> anything and we can get started right away. To evaluate data from our server in our templates we use the <span style="color:red">`{% %}`</span> notation and to print data we use <span style="color:red">`{{ }}`.</span>(Not clear on the difference between evaluating and printing data in a template ? Don't worry, we'll see an example soon)</span>
 
@@ -278,7 +278,7 @@ if __name__ == '__main__':
 
 <span style="color:black">Note also that that only Python code inside of <span style="color:red">`{{ }}` </span>gets printed to the page. You'll often see <span style="color:red">`for` </span>loops and <span style="color:red">`if` </span>statements defined inside of <span style="color:red">`{% %}`</span>, since we want to evaluate that code, but it's only when we're inside the <span style="color:red">`if`</span> or <span style="color:red">`for `</span>blocks that we want to display something on the page (using <span style="color:red">`{{ }}`</span>).</span>
 
-## Template Inheritance
+## 2.2 Template Inheritance
 
 <span style="color:black">One of the more powerful features of Jinja is the ability to use template inheritance, which means that one template can inherit from another. Let's see an example! First, let's create a file called <span style="color:red">`base.html`</span></span>
 
@@ -331,7 +331,7 @@ if __name__ == '__main__':
 	app.run()
 ```
 
-## URL Helpers
+## 2.3 URL Helpers
 
 <span style="color:black">Another great helper that Jinja has is the <span style="color:red">`url_for`</span> helper which eliminates the need for hard coding a URL. This is very helpful when you have dynamically created URLs or don't always know the exact path. Let's imagine we are working in our <span style="color:red">`index.html`</span> file and we would like an anchor tag to link to the route<span style="color:red"> `/second`</span>. We also know that in our <span style="color:red">`app.py` </span>the function that is used to send a response to our server is called <span style="color:red">`second`</span>. This is what we can place as the value for our <span style="color:red">`url_for()`</span>!</span>
 
@@ -350,7 +350,7 @@ if __name__ == '__main__':
 {% endblock %}
 ```
 
-## Getting data from the query string
+## 2.4 Getting data from the query string
 
 <span style="color:black">When a user submits a form via a GET request, that form data can be captured from the query string. Flask makes this process a bit easier with a method called <span style="color:red">`request`</span>. Let's see it in action. To begin, start with a simple form in a page called <span style="color:red">`first-form.html`</span>:</span>
 
@@ -399,7 +399,7 @@ if __name__ == '__main__':
 	app.run()
 ```
 
-#### Flask Exercises
+#### 2.4.1Flask Exercises
 
 **Flask Templating**
 
@@ -418,3 +418,4 @@ Refactor your calculator application from before!
 - in `calc.html`, build a form which has two inputs (one with a name of `num1` and another with the name of `num2`for numbers and a select field with the name of `calculation` with options for "add", "subract", "multiply" and "divide".
 - When the form is submitted it should make a request to a route called `/math`
 - In your python file, accept the values from the form and depending on what the request contains, respond with the sum, difference, product or quotient.
+
