@@ -399,7 +399,7 @@ if __name__ == '__main__':
 	app.run()
 ```
 
-#### 2.4.1Flask Exercises
+#### 2.4.1 Flask Exercises
 
 **Flask Templating**
 
@@ -418,4 +418,3 @@ Refactor your calculator application from before!
 - in `calc.html`, build a form which has two inputs (one with a name of `num1` and another with the name of `num2`for numbers and a select field with the name of `calculation` with options for "add", "subract", "multiply" and "divide".
 - When the form is submitted it should make a request to a route called `/math`
 - In your python file, accept the values from the form and depending on what the request contains, respond with the sum, difference, product or quotient.
-
